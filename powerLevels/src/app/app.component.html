@@ -1,0 +1,16 @@
+<h2>Initial Power Level</h2>
+
+<form (submit)='calculatePower()'>
+  <input type='text' name='power'[(ngModel)]="saiyan.powerlevel">
+  <input type='submit' value='Calculate Powers'>
+</form>
+
+<hr>
+<img src='https://i.ytimg.com/vi/5Qur20OTReE/maxresdefault.jpg' width='400px;'>
+
+<app-human-component [myPower]='power[0] * 1' ></app-human-component>
+<app-saiyan-component [myPower]='power[0] * 10'></app-saiyan-component>
+<app-super-saiyan-component [myPower]='power[0] * 90'></app-super-saiyan-component>
+<app-super-saiyan-two-component [myPower]='power[0] * 150'></app-super-saiyan-two-component>
+<app-super-saiyan-three-component [myPower]='power[0] * 250'></app-super-saiyan-three-component>
+<app-super-saiyan-four-component [myPower]='power[0] * 500'></app-super-saiyan-four-component>

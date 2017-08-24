@@ -1,0 +1,6 @@
+<div class='container'>
+
+  <app-add-quote [myQuote]='quotes' (onSubmitEvent)='createQuote($event)'></app-add-quote>
+  <app-quote-list [myQuote]='quotes' (deleteQuoteEvent)='deleteQuote($event)'></app-quote-list>
+
+</div>

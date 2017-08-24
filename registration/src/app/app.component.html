@@ -1,0 +1,41 @@
+<h2>Registration</h2>
+
+{{mesage[0]}}
+
+<div class='registration'>
+  <h4>Account Information</h4>
+  <form (submit)='thanks()'>
+    First Name:<input type='text' name='first_name' minlength="1" [(ngModel)]='user.first_name' #first_name='ngModel' required>
+    <span *ngIf=first_name.errors>First name is required</span>
+   <br><br>
+    Last Name:<input type='text' name='last_name' minlength="1" [(ngModel)]='user.last_name' #last_name='ngModel' required>
+    <span *ngIf=last_name.errors>Last name is required</span>
+    <br><br>
+    Email:<input type='email' name='email' minlength="1" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+(?:[A-Z]{2}|com|org|net|gov|mil|biz|info|mobi|name|aero|jobs|museum)\b" [(ngModel)]='user.email' #email='ngModel' required>
+    <span *ngIf=!email.valid>Email is not valid</span>
+    <br><br>
+    Password:<input type='password' name='password' minlength="5" [(ngModel)]='user.password' #password='ngModel' required>
+    <span *ngIf='password.errors'>Password must be at least 5 characters</span>
+    <br><br>
+    Password Confirmation:<input type='password' name='con_password' ng-match="password" [(ngModel)]='user.con_password' #con_password='ngModel' required>
+
+    <span *ngIf='con_password.errors'>Must match password</span>
+    <br><br>
+    Street Address:<input type='text' name='street' minlength="1" [(ngModel)]='user.street' #street='ngModel' required>
+    <span *ngIf='street.errors'>Address is required</span>
+    <br><br>
+    Unit/Apt#:<input type='text' name='unit' required [(ngModel)]='user.unit' #unit='ngModel'><br><br>
+    City::<input type='text' name='city' minlength="1" [(ngModel)]='user.city' #city='ngModel' required>
+    <span *ngIf='city.errors'>City is required</span>
+    <br><br>
+    State:<select>
+            <option>California</option>
+        </select><br><br>
+    I'm feeling lucky:<input type='radio' name='luck'>Yes
+                      <input type='radio' name='luck'>No
+                      <span>Choosing how you feel is required</span>
+                      <br><br>
+                      
+    <input type='submit' value='Register'>
+  </form>
+</div>

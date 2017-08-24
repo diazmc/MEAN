@@ -1,0 +1,8 @@
+.container {
+    border: 1px solid black;
+    padding: 8px;
+    height: 150px;
+    text-align: center;
+    font-style: italic;
+    font-size: 22px;
+}

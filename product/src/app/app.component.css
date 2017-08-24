@@ -1,0 +1,33 @@
+.header {
+    color: #094E62;
+    margin-bottom: 0px;
+}
+
+.routes {
+    border: 1px solid #87B0E6;
+    padding: 5px;
+    margin-top: 0px auto;
+    background-color: #87B0E6;
+    border-radius: 7px;
+}
+
+.container {
+    background-color: #D7EAF9;
+    padding: 15px;
+}
+#home {
+    padding-left: 30px;
+    padding-right: 20px;
+    border-right:   1px solid black;
+}
+#productlist {
+    padding-left: 30px;
+    padding-right: 20px;
+    border-right:   1px solid black;
+}
+
+#productcreation {
+    padding-left: 30px;
+    padding-right: 20px;
+    border-right:   1px solid black;
+}

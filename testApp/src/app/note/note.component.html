@@ -1,0 +1,6 @@
+<p>
+  note works!
+</p>
+{{notes | json}}
+<app-note-list [myNotes]='notes' (myEvent)='invoked($event)'></app-note-list>
+

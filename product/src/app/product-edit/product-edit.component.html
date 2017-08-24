@@ -1,0 +1,8 @@
+<h2>Edit Product</h2>
+
+<form (submit)='update()' #form='ngForm'>
+  Title:<input type='text' name='title' [(ngModel)]='product.title'><br><br>
+  Price:<input type='text' name='price' [(ngModel)]='product.price'><br><br>
+  Image URL(optional):<input type='text'><br><br>
+  <input type='submit' value='UPDATE'><br><br>
+</form>

@@ -1,0 +1,17 @@
+<h2>Create a New Product</h2>
+
+{{products | json}}
+
+<div class='form'>
+  <form (submit)='createProduct()' #form='ngForm'>
+    Title:<input type='text' name='title' [(ngModel)]='newProduct.title' #title='ngModel' minlength="4" required>
+    <span *ngIf='!title.valid && title.touched'><b>Minimum 4 characters</b></span>
+    <br><br>
+    Price:<input type='text' name='price' [(ngModel)]='newProduct.price' #price='ngModel' minlength="1" required>
+    <span *ngIf='!price.valid && price.touched'><b>Price required</b></span>
+    <br><br>
+    Image URL (Optional):<input type='text' name='image_url' [(ngModel)]='newProduct.imgURL' #url='ngModel'>
+    <br><br>
+    <input type='submit' value='CREATE' [disabled]='!form.valid'><br><br>
+  </form>
+</div>

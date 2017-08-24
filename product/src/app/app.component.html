@@ -1,0 +1,14 @@
+<div class='header'>
+  <h2>PPM - Project Product Management</h2>
+</div>
+<hr>
+
+<div class='routes'>
+  <a [routerLink]="['/home']" id='home'>Home</a>
+  <a [routerLink]="['/products']" id='productlist'>Product List</a>
+  <a [routerLink]="['/products','new']" id='productcreation'>Product Creation</a>
+</div>
+
+<div class='container'>
+  <router-outlet></router-outlet>
+</div>
